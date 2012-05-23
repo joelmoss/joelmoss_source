@@ -1,0 +1,70 @@
+---
+layout: home
+---
+
+<h1>we build apps that make the web tick...</h1>
+
+<section id="middle">
+  {% for post in site.posts limit: 1 %}
+    <article id="latest-post">
+      <div>
+        <img src="/images/home/pocoyo_avatar.png" width="68" height="68" />
+        <div>
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.content | strip_html | truncate: 230 }}</p>
+        </div>
+      </div>
+      <footer>
+        <section>
+          {% if post.author %}
+            {% assign author = post.author %}
+          {% elsif page.author %}
+            {% assign author = page.author %}
+          {% else %}
+            {% assign author = site.author %}
+          {% endif %}
+          <p id="name">{{ author }}</p>
+          <time datetime="{{ post.date | datetime }}">{{ post.date | ordinalize }}</time>
+        </section>
+        <section>
+          <a href="{{ root_url }}{{ post.url }}">view</a>
+        </section>
+      </footer>
+    </article>
+  {% endfor %}
+
+  <article id="about">
+    <p>
+      <strong>Develop With Style</strong> is exactly what we do! Founded and led by Joel Moss; a developer with over 13 years experience on the web, we focus on developing and designing web applications for you. We <strong>love</strong> what we do, and that is why we are the <strong>best</strong>, and continue to produce quality work and on-time delivery.
+    </p>
+    <h4>
+      So <a href="mailto:joel@developwithstyle.com">get in touch</a>, we would love to hear from you.
+    </h4>
+  </article>
+</section>
+
+<section id="hireus">
+  Want your project Developed with Style? <a href="mailto:joel@developwithstyle.com">Contact us...</a>
+</section>
+
+<section id="contact">
+  <h2>Joel can be contacted through any of the following ways...</h2>
+
+  <ul>
+    <li>Email: <a href="mailto:joel@developwithstyle.com">joel@developwithstyle.com</a></li>
+    <li>Twitter: <a href="http://twitter.com/joelmoss">@joelmoss</a></li>
+    <li>Github: <a href="http://github.com/joelmoss">joelmoss</a></li>
+    <li>Facebook: <a href="http://facebook.com/joelmoss">joelmoss</a></li>
+    <li>AIM: <a href="aim:joelkmoss">joelkmoss</a></li>
+    <li>MSN: joel@joelmoss.info</li>
+    <li>Skype: <a href="callto://joelmoss.info/">joelmoss.info</a></li>
+  </ul>
+
+  <br>
+  <p>Or just give Joel a call +44 (0)7791 503309.</p>
+
+</section>
+
+<aside role=sidebar>
+  {% include asides/twitter.html %}
+</aside>
