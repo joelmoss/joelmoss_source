@@ -16,7 +16,7 @@ Please note, that this post is very Ruby-centric, so only considers what is avai
 
 Rails is awesome... for most things. But when you don't need any views or assets, or when you are not building a traditional web application, it's overkill. And you'll soon start finding that your app is slow. You have to remember that Rails is a full stack framework, but your API is most likely not.
 
-If you really have to use a Framework, check out Jekyll, which has a much smaller footprint. Or peel it back even further, and create a bare bones Rack app. Which is a lot easier than you might think.
+If you really have to use a Framework, check out Sinatra, which has a much smaller footprint. Or peel it back even further, and create a bare bones Rack app. Which is a lot easier than you might think.
 
 
 ### 2. Don't use ActiveRecord
